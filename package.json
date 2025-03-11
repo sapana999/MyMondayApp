@@ -1,0 +1,45 @@
+{
+  "name": "monday-recipe-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.21.2",
+    "mysql2": "^3.13.0",
+    "sequelize": "^6.37.6"
+  },
+  "schema": {
+    "triggers": [
+      {
+        "name": "Item Created",
+        "description": "Triggered when an item is created in the board",
+        "url": "https://bba0-111-220-27-155.ngrok-free.app/triggers/item_created/subscribe",
+        "type": "webhook"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Send Notification",
+        "description": "Sends a notification when an item is created",
+        "url": "https://953d-111-220-27-155.ngrok-free.app//actions/send_notification"
+      }
+    ],
+    "settings": {
+      "auth": {
+        "type": "oauth2",
+        "client_id": "8bbe3a9b42d58dc4e4336130be91adcb",
+        "client_secret": "aa535543be7987b2faba2b1151f8d765"
+      }
+    }
+  }
+}
