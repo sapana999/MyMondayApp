@@ -12,10 +12,12 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "axios": "^1.8.2",
     "body-parser": "^1.20.3",
     "dotenv": "^10.0.0",
     "express": "^4.21.2",
     "mysql2": "^3.13.0",
+    "ngrok": "^5.0.0-beta.2",
     "sequelize": "^6.37.6"
   },
   "schema": {
@@ -23,7 +25,7 @@
       {
         "name": "Item Created",
         "description": "Triggered when an item is created in the board",
-        "url": "https://bba0-111-220-27-155.ngrok-free.app/triggers/item_created/subscribe",
+        "url": "https://f572-111-220-27-155.ngrok-free.app/triggers/item_created/subscribe",
         "type": "webhook"
       }
     ],
@@ -31,7 +33,7 @@
       {
         "name": "Send Notification",
         "description": "Sends a notification when an item is created",
-        "url": "https://953d-111-220-27-155.ngrok-free.app//actions/send_notification"
+        "url": "https://f572-111-220-27-155.ngrok-free.app/actions/send_notification"
       }
     ],
     "settings": {
